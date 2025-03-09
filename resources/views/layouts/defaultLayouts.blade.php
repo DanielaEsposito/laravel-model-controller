@@ -10,7 +10,8 @@
 </head>
 
 <body>
-
+    @import('partials.header');
+    @yield('content');
 </body>
 
 </html>

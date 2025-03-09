@@ -2,13 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Movie;
 use Illuminate\Http\Request;
 
 class PageController extends Controller
 {
     public function index()
     {
-        return view('homepage');
+        $movies = Movie::all();
+        return view('homepage', compact($movies));
     }
 }
-//file php che viene richiamato dalla filoe web.php su route
+//file php che viene richiamato dalla file web.php su route
